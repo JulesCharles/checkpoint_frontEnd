@@ -1,0 +1,26 @@
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.continent-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hey {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid whitesmoke;
+  width: 30%;
+  height: 15vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

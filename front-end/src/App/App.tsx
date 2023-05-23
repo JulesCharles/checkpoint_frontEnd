@@ -1,25 +1,23 @@
-import './App.css';
-import React from "react"
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import ContinentList from '../screens/Continents/ContinentList'
+import CountryList from '../screens/Countries/CountryList'
+import Details from '../screens/Details/Details'
+import { Link } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Link to="/">
+        <div className="home">Back Home</div>
+      </Link>
+      <Routes>
+        <Route path='/' element={<ContinentList />} />
+        <Route path="/continent/:continentCode" element={<CountryList />} />
+        <Route path="/country/:countryCode" element={<Details />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
